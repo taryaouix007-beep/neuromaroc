@@ -1,0 +1,281 @@
+{
+  "nav": {
+    "home": "Home",
+    "science": "Science",
+    "programmes": "Programs",
+    "centres": "Our Centres",
+    "about": "About Us",
+    "idees": "Suggestions Box",
+    "forum": "💬 Parents Forum",
+    "blog": "Blog",
+    "franchise": "🔑 Franchise Portal",
+    "community": "Community",
+    "cta": "Get Guidance"
+  },
+  "footer": {
+    "desc": "Center of excellence in neurofeedback in Morocco. 100% natural brain training for your well-being.",
+    "programmes": "Our Programs",
+    "programmesList": {
+      "parents": "School Focus",
+      "performers": "Peak Performance",
+      "adults": "Serenity & Sleep",
+      "trauma": "Trauma & PTSD"
+    },
+    "centres": "Our Centres",
+    "centresList": {
+      "casablanca": "Casablanca",
+      "marrakech": "Marrakech",
+      "kenitra": "Kenitra",
+      "tanger": "Tangier"
+    },
+    "contact": "Contact",
+    "address": "No. 12 2nd floor, Living office Building, 362 BD Ghandi Oasis, Casablanca",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "orient": "Get Guidance",
+    "learnMore": "Learn More",
+    "comingSoon": "Coming Soon"
+  },
+  "home": {
+    "starsText": "4.9/5 — 200+ satisfied patients",
+    "heroTitle": "Free your brain from stress",
+    "heroDesc": "Natural brain training for deep sleep, absolute concentration, and a peaceful mind.",
+    "heroBullets": [
+      "Drug-free — 100% natural",
+      "Benefits felt from the 1st session",
+      "4 centres in Morocco"
+    ],
+    "btnQuiz": "📝 Assess My Brain Profile",
+    "btnApproach": "Discover the approach",
+    "whatisSubtitle": "Understand the technology",
+    "whatisTitle": "What is Neurofeedback?",
+    "whatisDesc": "Discover how this passive brain training method utilizes the natural plasticity of the nervous system.",
+    "processSubtitle": "How it works",
+    "processTitle": "A simple and natural process",
+    "processDesc": "Neurofeedback is a non-invasive method that allows your brain to learn to function better, naturally.",
+    "step1Title": "Listening",
+    "step1Desc": "During a session, you are comfortably seated. Non-invasive sensors measure your brain's electrical activity in real time.",
+    "step2Title": "Feedback",
+    "step2Desc": "You watch a movie or listen to music. The audio and visual outputs adapt instantly based on your brain activity, creating a natural feedback loop.",
+    "step3Title": "Self-Regulation",
+    "step3Desc": "Your brain learns to optimize itself. Session after session, new neural pathways form for long-lasting well-being.",
+    "reviewsList": [
+      { "name": "Fatima E.", "text": "Sleep restored in 6 sessions" },
+      { "name": "Rachid B.", "text": "Concentration boosted for my exams" },
+      { "name": "Dr. Amine T.", "text": "An exceptional ally for my patients" },
+      { "name": "Laila M.", "text": "Finally free from brain fog" }
+    ],
+    "programsSubtitle": "Targeted Programs",
+    "programsTitle": "Neuro-Sensory Support",
+    "programsDesc": "Discover how brain training addresses the precise neurological needs of each profile.",
+    "progParentsTitle": "For Parents",
+    "progParentsBadge": "👨‍👩‍👧 Pediatric Support",
+    "progParentsSub": "Brain Training for Kids",
+    "progParentsText": "Does your child face attention challenges (ADHD), school anxiety, or autism? If you've tried traditional solutions and are looking for a natural alternative, NeurOptimal® neurofeedback gently trains the brain to self-regulate, addressing the root cause of cerebral dysregulation.",
+    "progParentsStat": "85%",
+    "progParentsStatText": "Observed clinical impact: 85% significant improvement in child behavior and attention in school environments.",
+    "progParentsBullets": [
+      "No side effects — 100% natural training.",
+      "Proven improvement in concentration, memory, and emotional regulation.",
+      "Long-lasting results and enhanced daily independence."
+    ],
+    "progParentsBtn1": "📖 Download Parents Guide",
+    "progParentsBtn2": "📞 Personal Orientation Call",
+    "progTraumaTitle": "Veterans & Trauma Survivors",
+    "progTraumaBadge": "🎖️ Nervous System Regulation",
+    "progTraumaSub": "Trauma Recovery",
+    "progTraumaText": "Repeated emotional shocks, post-traumatic stress (PTSD), and traumatic brain injuries (TBI) keep your nervous system on constant alert, causing insomnia and hypervigilance. Neurofeedback retrains your brain to escape 'survival mode' to find calm, control, and resilience.",
+    "progTraumaStat": "91%",
+    "progTraumaStatText": "Observed clinical impact: 91% of supported individuals report a major reduction in hypervigilance and stress symptoms.",
+    "progTraumaBullets": [
+      "Significant decrease in nightmares and calming of hypervigilance.",
+      "Natural restoration of deep and restful sleep.",
+      "Reclaiming emotional control and finding inner peace."
+    ],
+    "progTraumaBtn1": "📊 Trauma Clinical Report",
+    "progTraumaBtn2": "📞 Orientation Consultation",
+    "progPerformersTitle": "Peak Performers",
+    "progPerformersBadge": "🚀 Cognitive Optimization",
+    "progPerformersSub": "Peak Performance",
+    "progPerformersText": "Whether you are a CEO, top-level entrepreneur, or athlete, your daily life requires surgical mental clarity. Neurofeedback is the ultimate brain optimization tool — the same one used by special forces and Olympic athletes to gain a decisive competitive edge.",
+    "progPerformersStat": "+45%",
+    "progPerformersStatText": "Observed clinical impact: +45% focus duration without signs of fatigue or cognitive decline.",
+    "progPerformersBullets": [
+      "Ultra-precise focus and absolute mental clarity under high pressure.",
+      "Improved nervous resilience and optimal stress management.",
+      "Faster and more effective strategic decision-making."
+    ],
+    "progPerformersBtn1": "📊 Schedule Performance Assessment",
+    "progPerformersBtn2": "🔬 Understand the Science",
+    "progAdultsTitle": "For Adults",
+    "progAdultsBadge": "🧠 Serenity & Balance",
+    "progAdultsSub": "Emotional Wellness",
+    "progAdultsText": "Do you feel stuck in an endless cycle of chronic anxiety, depression, or nervous exhaustion from burnout? Neurofeedback offers a gentle method to break this vicious cycle by helping your nervous system restore its balance and natural internal peace.",
+    "progAdultsStat": "83%",
+    "progAdultsStatText": "Observed clinical impact: 83% reduction in panic attacks and mental load after 8 sessions.",
+    "progAdultsBullets": [
+      "Gradual liberation from latent anxiety and panic attacks.",
+      "Safe, natural reduction of reliance on mental fatigue.",
+      "Restored sleep quality and better nervous vitality."
+    ],
+    "progAdultsBtn1": "📝 Take Cognitive Fatigue Test",
+    "progAdultsBtn2": "📞 Talk to a Practitioner",
+    "visionSubtitle": "Our Story",
+    "visionTitle": "A vision born from deep conviction",
+    "visionText": "Dr. Chadia Chakib founded INFC with one conviction: every brain has the ability to self-regulate. Trained in the most rigorous NeurOptimal® protocols, she built the first network of premium neurofeedback centers in Morocco.",
+    "visionTimeline": [
+      { "year": "2015", "text": "First international training in neurofeedback — NeurOptimal® certified." },
+      { "year": "2018", "text": "Opening of the first clinic in Casablanca — Twin Center." },
+      { "year": "2022", "text": "National expansion: 4 centers in Casablanca, Marrakech, Kenitra, and Tangier." },
+      { "year": "2024+", "text": "+500 patients supported, active medical partnerships, and practitioner training program." }
+    ],
+    "visionBtn": "Discover our complete story ➔",
+    "problemsSubtitle": "What we treat",
+    "problemsTitle": "Challenges we help overcome",
+    "problemsDesc": "A neuro-sensitive, scientifically grounded approach adapted to each profile.",
+    "problemsList": [
+      { "icon": "🧠", "title": "ADHD & Attention", "desc": "Concentration difficulties, impulsivity, and disorganization in children and adults." },
+      { "icon": "😰", "title": "Anxiety & Stress", "desc": "Generalized anxiety, panic attacks, professional burnout, and mental overload." },
+      { "icon": "🌙", "title": "Sleep & Recovery", "desc": "Chronic insomnia, recurring nightmares, persistent fatigue." },
+      { "icon": "🛡️", "title": "Trauma & PTSD", "desc": "Emotional sequels, hypervigilance, and post-traumatic stress after shock." },
+      { "icon": "🎯", "title": "Cognitive Performance", "desc": "Optimization of mental clarity, decision making, and resilience under pressure." },
+      { "icon": "💜", "title": "Mood & Balance", "desc": "Low mood, mood swings, and emotional instability affecting daily life." }
+    ],
+    "problemsAlsoTitle": "Complementary approaches that also help",
+    "problemsAlsoTags": [
+      "🧘 Mindfulness",
+      "🌬️ Conscious breathing",
+      "🥗 Brain nutrition",
+      "🏃 Physical activity",
+      "🛋️ Cognitive Behavioral Therapy (CBT)",
+      "💊 Sophrology",
+      "🎵 Music therapy"
+    ],
+    "storiesSubtitle": "Real Testimonials",
+    "storiesTitle": "Success Stories",
+    "storiesDesc": "Documented transformational journeys, with stages, figures, and results.",
+    "storiesList": [
+      {
+        "avatar": "👩",
+        "name": "Sarah M.",
+        "type": "Parent — ADHD",
+        "quote": "\"After 6 months, my son's ADHD symptoms have radically changed. His focus in class is incomparable.\"",
+        "stat": "📊 -65% distractibility in class"
+      },
+      {
+        "avatar": "👨‍💼",
+        "name": "James T.",
+        "type": "Peak Performer — Stress",
+        "quote": "\"Neurofeedback has transformed my stress management. I feel more lucid and in control of my decisions.\"",
+        "stat": "📊 -58% perceived stress"
+      },
+      {
+        "avatar": "👴",
+        "name": "Michael R.",
+        "type": "Veteran — Trauma",
+        "quote": "\"For the first time in years, I sleep through the night. Neurofeedback gave me my life back.\"",
+        "stat": "📊 -75% hypervigilance"
+      }
+    ],
+    "storiesBtn": "Explore all stories by type ➔",
+    "storiesRating": "★★★★★ 5.0/5 — 120+ verified testimonials",
+    "medicalSubtitle": "For the Medical Community",
+    "medicalTitle": "Healthcare Professionals & Medical Space",
+    "medicalDesc": "Clinical evidence, scientific publications, and meta-analyses validating the neuro-sensory regulation approach.",
+    "medicalFormTitle": "🧬 Private Access - Clinical Documentation & Exchange",
+    "medicalFormDesc": "Are you a clinician, physician, or healthcare professional? Access our complete scientific database, receive clinical files of our patients in Morocco, and schedule a scientific information meeting with our certified practitioners.",
+    "medicalFormBullets": [
+      "Complete medical bibliography (over 150 referenced studies).",
+      "Exclusive invitation to our regular round tables and clinical presentations.",
+      "Direct referral protocols for your complex patients."
+    ],
+    "medicalFormLabelName": "First & Last Name",
+    "medicalFormLabelSpecialty": "Specialty",
+    "medicalFormLabelEmail": "Professional Email",
+    "medicalFormLabelPhone": "Phone / WhatsApp",
+    "medicalFormLabelObjective": "Your primary objective",
+    "medicalFormObjectiveDoc": "Receive scientific bibliography & clinical reports (PDF)",
+    "medicalFormObjectiveMeeting": "Schedule a 15-minute clinical presentation (In-person or Videoconference)",
+    "medicalFormBtn": "Access documents & Schedule ➔",
+    "medicalSuccess": "✓ Your request has been successfully registered. Our teams will contact you within 24 hours with the complete documentation.",
+    "medicalSpecialties": {
+      "pediatre": "Pediatrician",
+      "psychiatre": "Psychiatrist",
+      "neurologue": "Neurologist",
+      "generaliste": "General Practitioner",
+      "psychologue": "Psychologist",
+      "autre": "Other Specialty"
+    },
+    "medicalArticles": [
+      {
+        "title": "Pediatrics & ADHD",
+        "desc": "Clinical meta-analysis demonstrating sustainable reduction of inattention and motor hyperactivity in children through neurofeedback training compared to conventional pharmacological approaches.",
+        "linkText": "📄 Read clinical study ➔"
+      },
+      {
+        "title": "Traumatic Brain Injuries (TBI) & PTSD",
+        "desc": "Published clinical study showing major improvements in falling asleep, pain management, and nightmare attenuation in veterans suffering from PTSD and mild traumatic brain injury.",
+        "linkText": "📄 Consult research article ➔"
+      },
+      {
+        "title": "Neuroplasticity & Deep Sleep",
+        "desc": "Explanatory scientific dossier on how NeurOptimal® signal micro-interruptions stimulate intrinsic brain neuroplasticity by promoting delta and theta waves essential for regulatory rest.",
+        "linkText": "📄 Download scientific report ➔"
+      }
+    ],
+    "teamSubtitle": "Our Team",
+    "teamTitle": "Expert Practitioners at Your Service",
+    "teamDesc": "Qualified professionals trained to the highest scientific protocols to guide you toward balance.",
+    "teamPhotoSoon": "Photo coming soon",
+    "teamList": [
+      {
+        "name": "Dr. Chadia Chakib",
+        "role": "Founder & Certified Practitioner",
+        "desc": "Specialized in neuro-sensory regulation and cognitive dysregulation support at INFC Morocco."
+      },
+      {
+        "name": "INFC Practitioner",
+        "role": "Senior Practitioner & Pediatric Focus",
+        "desc": "Expert in ADHD support, school focus, and neurodivergent child support."
+      },
+      {
+        "name": "INFC Practitioner",
+        "role": "Stress & Coherence Consultant",
+        "desc": "Specialized in acute stress regulation, burnout, and neuro-cardiac coherence."
+      }
+    ],
+    "centersSubtitle": "Our Centres",
+    "centersTitle": "A clinic near you",
+    "centersDesc": "4 centers of excellence in Morocco, equipped with the latest neurofeedback technologies for your well-being.",
+    "centersBtn": "View center ➔",
+    "finalSubtitle": "Start Now",
+    "finalTitle": "Ready to transform your life?",
+    "finalDesc": "Take the first step toward a more efficient brain and a peaceful mind. Our online assessment and personalized orientation will give you a first glimpse of your needs.",
+    "finalBtn": "Assess My Brain Profile ➔",
+    "finalSubBtn": "Personalized analysis in 2 minutes",
+    "finalBullets": [
+      "100% Confidential",
+      "No obligation",
+      "Immediate results"
+    ],
+    "newsletterSubtitle": "Newsletter & Advice",
+    "newsletterTitle": "Subscribe to the Neuro-Sensible Letter",
+    "newsletterDesc": "Receive exclusive weekly routines for your child's concentration, clinical case studies, and expert answers to community questions.",
+    "newsletterPlaceholder": "Your primary email address",
+    "newsletterBtn": "Join the list ➔",
+    "newsletterSecure": "🔒 Your data remains confidential. Unsubscribe in 1 click."
+  },
+  "science": {
+    "heroTitle": "Training the brain to self-regulate",
+    "heroDesc": "Discover the science behind NeurOptimal® dynamic neurofeedback. A natural, non-invasive approach to brain regulation, validated by decades of neuroscientific research.",
+    "loopSubtitle": "Organic Training",
+    "loopTitle": "How does the regulation loop work?",
+    "loopDesc": "This is not an active medical therapy. It is a real-time mirror that allows your brain to self-correct."
+  },
+  "seo": {
+    "title": "INFC — Premium Neuro-Sensory Regulation Center in Morocco",
+    "description": "A natural, non-invasive approach to free your brain from stress. 4 centers of excellence in Morocco: Casablanca, Marrakech, Kenitra, Tangier.",
+    "keywords": "neurofeedback morocco, brain training, neurofeedback casablanca, adhd morocco, insomnia morocco, nervous system regulation"
+  }
+}

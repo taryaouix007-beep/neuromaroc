@@ -1,0 +1,281 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "science": "La Science",
+    "programmes": "Programmes",
+    "centres": "Nos Centres",
+    "about": "À Propos",
+    "idees": "Boîte à Idées",
+    "forum": "💬 Forum Parents",
+    "blog": "Blog",
+    "franchise": "🔑 Espace Franchise",
+    "community": "Communauté",
+    "cta": "S'orienter"
+  },
+  "footer": {
+    "desc": "Centre d'excellence en neurofeedback au Maroc. Entraînement cérébral 100% naturel pour votre bien-être.",
+    "programmes": "Nos Programmes",
+    "programmesList": {
+      "parents": "Focus Scolaire",
+      "performers": "Haute Performance",
+      "adults": "Sérénité & Sommeil",
+      "trauma": "Trauma & ESPT"
+    },
+    "centres": "Nos Centres",
+    "centresList": {
+      "casablanca": "Casablanca",
+      "marrakech": "Marrakech",
+      "kenitra": "Kénitra",
+      "tanger": "Tanger"
+    },
+    "contact": "Contact",
+    "address": "Nº12 2ème étage, Immeuble Living office 362 BD Ghandi Oasis, Casablanca",
+    "rights": "Tous droits réservés."
+  },
+  "common": {
+    "orient": "S'orienter",
+    "learnMore": "En savoir plus",
+    "comingSoon": "Bientôt disponible"
+  },
+  "home": {
+    "starsText": "4.9/5 — 200+ patients satisfaits",
+    "heroTitle": "Libérez votre cerveau du stress",
+    "heroDesc": "Entraînement cérébral naturel pour un sommeil profond, une concentration absolue et un esprit apaisé.",
+    "heroBullets": [
+      "Sans médicaments — 100% naturel",
+      "Bienfaits ressentis dès la 1ère séance",
+      "4 centres au Maroc"
+    ],
+    "btnQuiz": "📝 Évaluer mon Profil Cérébral",
+    "btnApproach": "Découvrir l'approche",
+    "whatisSubtitle": "Comprendre la technologie",
+    "whatisTitle": "Qu'est-ce que le Neurofeedback ?",
+    "whatisDesc": "Découvrez comment cette méthode d'entraînement cérébral passive utilise la plasticité naturelle du système nerveux.",
+    "processSubtitle": "Comment ça marche",
+    "processTitle": "Un processus simple et naturel",
+    "processDesc": "Le neurofeedback est une méthode non invasive qui permet à votre cerveau d'apprendre à mieux fonctionner, naturellement.",
+    "step1Title": "Écoute",
+    "step1Desc": "Lors d'une séance, vous êtes confortablement installé. Des capteurs non invasifs mesurent l'activité électrique de votre cerveau en temps réel.",
+    "step2Title": "Feedback",
+    "step2Desc": "Vous regardez un film ou écoutez de la musique. L'audio et le visuel s'adaptent instantanément selon l'activité de votre cerveau, créant un retour naturel.",
+    "step3Title": "Auto-Régulation",
+    "step3Desc": "Votre cerveau apprend à s'optimiser lui-même. Séance après séance, de nouvelles connexions neuronales se forment pour un bien-être durable.",
+    "reviewsList": [
+      { "name": "Fatima E.", "text": "Sommeil restauré en 6 séances" },
+      { "name": "Rachid B.", "text": "Concentration décuplée pour mes examens" },
+      { "name": "Dr. Amine T.", "text": "Un allié exceptionnel pour mes patients" },
+      { "name": "Laila M.", "text": "Enfin libérée du brouillard mental" }
+    ],
+    "programsSubtitle": "Programmes Ciblés",
+    "programsTitle": "Accompagnements Neuro-Sensibles",
+    "programsDesc": "Découvrez comment l'entraînement cérébral répond aux besoins neurologiques précis de chaque profil.",
+    "progParentsTitle": "Pour les Parents",
+    "progParentsBadge": "👨‍👩‍👧 Accompagnement Pédiatrique",
+    "progParentsSub": "Brain Training for Kids",
+    "progParentsText": "Votre enfant fait face à des défis d'attention (TDA/H), d'anxiété scolaire ou d'autisme ? Vous avez essayé les solutions traditionnelles et cherchez une alternative naturelle. Le neurofeedback NeurOptimal® entraîne doucement le cerveau à s'auto-réguler, s'attaquant à la cause profonde de la dysrégulation cérébrale.",
+    "progParentsStat": "85%",
+    "progParentsStatText": "Impact clinique constaté : 85% d'amélioration significative des comportements et de l'attention chez l'enfant en milieu scolaire.",
+    "progParentsBullets": [
+      "Sans aucun effet secondaire — entraînement 100% naturel.",
+      "Amélioration prouvée de la concentration, de la mémorisation et de la régulation émotionnelle.",
+      "Résultats durables et autonomie renforcée au quotidien."
+    ],
+    "progParentsBtn1": "📖 Télécharger le Guide Parents",
+    "progParentsBtn2": "📞 Échange d'Orientation Personnalisé",
+    "progTraumaTitle": "Vétérans & Rescapés de Trauma",
+    "progTraumaBadge": "🎖️ Régulation du Système Nerveux",
+    "progTraumaSub": "Trauma Recovery",
+    "progTraumaText": "Les chocs émotionnels répétés, le stress post-traumatique (ESPT / PTSD) et les traumatismes crâniens (TBI) maintiennent votre système nerveux en état d'alerte permanent, provoquant insomnies et hypervigilance. Le neurofeedback ré-entraîne votre cerveau à sortir du mode \"survie\" pour retrouver calme, contrôle et résilience.",
+    "progTraumaStat": "91%",
+    "progTraumaStatText": "Impact clinique constaté : 91% des personnes accompagnées rapportent une baisse majeure des symptômes d'hypervigilance et de stress.",
+    "progTraumaBullets": [
+      "Diminution significative des cauchemars et apaisement de l'hypervigilance.",
+      "Restauration naturelle d'un sommeil profond et récupérateur.",
+      "Réappropriation du contrôle émotionnel et paix intérieure retrouvée."
+    ],
+    "progTraumaBtn1": "📊 Rapport Clinique Trauma",
+    "progTraumaBtn2": "📞 Consultation d'orientation",
+    "progPerformersTitle": "Peak Performers",
+    "progPerformersBadge": "🚀 Optimisation Cognitive",
+    "progPerformersSub": "Peak Performance",
+    "progPerformersText": "Que vous soyez CEO, entrepreneur de haut niveau ou athlète, votre quotidien requiert une clarté mentale chirurgicale. Le neurofeedback est l'outil d'optimisation cérébrale ultime — le même que celui utilisé par les forces spéciales et les sportifs olympiques pour acquérir un avantage compétitif décisif.",
+    "progPerformersStat": "+45%",
+    "progPerformersStatText": "Impact clinique constaté : +45% de durée de focus sans signe de fatigue ou de baisse de performance cognitive.",
+    "progPerformersBullets": [
+      "Focus ultra-précis et clarté mentale absolue sous forte pression.",
+      "Amélioration de la résilience nerveuse et gestion optimale du stress.",
+      "Prise de décision stratégique plus rapide et efficace."
+    ],
+    "progPerformersBtn1": "📊 Planifier un Bilan Performance",
+    "progPerformersBtn2": "🔬 Comprendre la science",
+    "progAdultsTitle": "Pour les Adultes",
+    "progAdultsBadge": "🧠 Sérénité & Équilibre",
+    "progAdultsSub": "Emotional Wellness",
+    "progAdultsText": "Vous vous sentez coincé dans un cycle infini d'anxiété chronique, de déprime, ou de fatigue nerveuse liée au burn-out ? Le neurofeedback offre une méthode douce pour rompre ce cercle vicieux en aidant votre système nerveux à retrouver son équilibre et sa paix interne naturelle.",
+    "progAdultsStat": "83%",
+    "progAdultsStatText": "Impact clinique constaté : 83% de réduction des crises d'angoisse et de la charge mentale après 8 séances.",
+    "progAdultsBullets": [
+      "Libération progressive de l'anxiété latente et des attaques de panique.",
+      "Réduction sécurisée et naturelle de la dépendance à la fatigue mentale.",
+      "Qualité de sommeil restaurée et meilleure vitalité nerveuse."
+    ],
+    "progAdultsBtn1": "📝 Faire le Test de Fatigue Cognitive",
+    "progAdultsBtn2": "📞 Parler à un praticien",
+    "visionSubtitle": "Notre Histoire",
+    "visionTitle": "Une vision née d'une conviction profonde",
+    "visionText": "Dr. Chadia Chakib a fondé l'INFC avec une conviction : chaque cerveau a la capacité de se réguler lui-même. Formée aux protocoles NeurOptimal® les plus rigoureux, elle a bâti le premier réseau de centres de neurofeedback premium au Maroc.",
+    "visionTimeline": [
+      { "year": "2015", "text": "Première formation internationale en neurofeedback — certifiée NeurOptimal®." },
+      { "year": "2018", "text": "Ouverture du premier cabinet à Casablanca — Twin Center." },
+      { "year": "2022", "text": "Expansion nationale : 4 centres à Casablanca, Marrakech, Kénitra et Tanger." },
+      { "year": "2024+", "text": "+500 patients accompagnés, partenariats médicaux actifs et programme de formation des praticiens." }
+    ],
+    "visionBtn": "Découvrir notre histoire complète ➔",
+    "problemsSubtitle": "Ce que nous traitons",
+    "problemsTitle": "Les défis que nous aidons à surmonter",
+    "problemsDesc": "Une approche neuro-sensible, scientifiquement fondée, adaptée à chaque profil.",
+    "problemsList": [
+      { "icon": "🧠", "title": "TDA/H & Attention", "desc": "Difficultés de concentration, impulsivité et désorganisation chez l'enfant et l'adulte." },
+      { "icon": "😰", "title": "Anxiété & Stress", "desc": "Anxiété généralisée, crises de panique, burn-out professionnel et surcharge mentale." },
+      { "icon": "🌙", "title": "Sommeil & Récupération", "desc": "Insomnie chronique, cauchemars récurrents, fatigue persistante." },
+      { "icon": "🛡️", "title": "Trauma & ESPT", "desc": "Séquelles émotionnelles, hypervigilance et stress post-traumatique après choc." },
+      { "icon": "🎯", "title": "Performance Cognitive", "desc": "Optimisation de la clarté mentale, prise de décision et résilience sous pression." },
+      { "icon": "💜", "title": "Humeur & Équilibre", "desc": "Déprime, sautes d'humeur et instabilité émotionnelle impactant le quotidien." }
+    ],
+    "problemsAlsoTitle": "Ce qui fonctionne aussi en complément",
+    "problemsAlsoTags": [
+      "🧘 Mindfulness",
+      "🌬️ Respiration consciente",
+      "🥗 Nutrition cérébrale",
+      "🏃 Activité physique",
+      "🛋️ Thérapie cognitive (TCC)",
+      "💊 Sophrologie",
+      "🎵 Musicothérapie"
+    ],
+    "storiesSubtitle": "Témoignages Réels",
+    "storiesTitle": "Histoires de Réussite",
+    "storiesDesc": "Des parcours de transformation documentés, avec étapes, chiffres et résultats.",
+    "storiesList": [
+      {
+        "avatar": "👩",
+        "name": "Sarah M.",
+        "type": "Parent — TDA/H",
+        "quote": "\"Après 6 mois, les symptômes de TDAH de mon fils ont radicalement changé. Son focus en classe est incomparable.\"",
+        "stat": "📊 -65% de distractibilité en classe"
+      },
+      {
+        "avatar": "👨‍💼",
+        "name": "James T.",
+        "type": "Peak Performer — Stress",
+        "quote": "\"Le neurofeedback a transformé ma gestion du stress. Je me sens plus lucide et maître de mes décisions.\"",
+        "stat": "📊 -58% de stress perçu"
+      },
+      {
+        "avatar": "👴",
+        "name": "Michael R.",
+        "type": "Vétéran — Trauma",
+        "quote": "\"Pour la première fois depuis des années, je dors toute la nuit. Le neurofeedback m'a rendu ma vie.\"",
+        "stat": "📊 -75% d'hypervigilance"
+      }
+    ],
+    "storiesBtn": "Explorer toutes les histoires par type ➔",
+    "storiesRating": "★★★★★ 5.0/5 — 120+ témoignages vérifiés",
+    "medicalSubtitle": "Pour le corps médical",
+    "medicalTitle": "Espace Professionnels de Santé & Corps Médical",
+    "medicalDesc": "Les preuves cliniques, publications scientifiques et méta-analyses validant l'approche de régulation neuro-sensible.",
+    "medicalFormTitle": "🧬 Accès Privé - Documentation Clinique & Échanges",
+    "medicalFormDesc": "Vous êtes clinicien, médecin ou professionnel de la santé ? Accédez à notre base de données scientifique complète, recevez les dossiers cliniques de nos patients suivis au Maroc et planifiez une rencontre d'information scientifique avec nos praticiens certifiés.",
+    "medicalFormBullets": [
+      "Bibliographie médicale complète (plus de 150 études référencées).",
+      "Invitation exclusive à nos tables rondes et présentations cliniques régulières.",
+      "Protocoles d'adressage direct pour vos patients complexes."
+    ],
+    "medicalFormLabelName": "Nom & Prénom",
+    "medicalFormLabelSpecialty": "Spécialité",
+    "medicalFormLabelEmail": "Email Professionnel",
+    "medicalFormLabelPhone": "Téléphone / WhatsApp",
+    "medicalFormLabelObjective": "Votre Objectif principal",
+    "medicalFormObjectiveDoc": "Recevoir la bibliographie scientifique & rapports cliniques (PDF)",
+    "medicalFormObjectiveMeeting": "Planifier une présentation clinique de 15 min (Présentiel ou Visioconférence)",
+    "medicalFormBtn": "Accéder aux documents & Planifier ➔",
+    "medicalSuccess": "✓ Votre demande a été enregistrée avec succès. Nos équipes vous contacteront sous 24h avec la documentation complète.",
+    "medicalSpecialties": {
+      "pediatre": "Pédiatre",
+      "psychiatre": "Psychiatre",
+      "neurologue": "Neurologue",
+      "generaliste": "Généraliste",
+      "psychologue": "Psychologue",
+      "autre": "Autre Spécialité"
+    },
+    "medicalArticles": [
+      {
+        "title": "Pédiatrie & TDA/H",
+        "desc": "Méta-analyse clinique démontrant la réduction durable de l'inattention et de l'hyperactivité motrice chez l'enfant par l'entraînement en neurofeedback par rapport aux approches pharmacologiques conventionnelles.",
+        "linkText": "📄 Lire l'étude clinique ➔"
+      },
+      {
+        "title": "Traumatismes Cérébraux (TBI) & ESPT",
+        "desc": "Étude clinique publiée démontrant une amélioration majeure de l'endormissement, de la gestion de la douleur et de l'atténuation des cauchemars chez les vétérans souffrant d'ESPT et de lésions crâniennes légères.",
+        "linkText": "📄 Consulter l'article de recherche ➔"
+      },
+      {
+        "title": "Neuroplasticité & Sommeil Profond",
+        "desc": "Dossier scientifique explicatif sur la façon dont les micro-interruptions du signal NeurOptimal® stimulent la neuroplasticité intrinsèque du cerveau en favorisant les ondes delta et thêta indispensables au repos régulateur.",
+        "linkText": "📄 Télécharger le rapport scientifique ➔"
+      }
+    ],
+    "teamSubtitle": "Notre Équipe",
+    "teamTitle": "Des Praticiens Experts à votre Écoute",
+    "teamDesc": "Des professionnels qualifiés, formés aux protocoles scientifiques les plus exigeants pour vous accompagner vers l'équilibre.",
+    "teamPhotoSoon": "Photo à venir",
+    "teamList": [
+      {
+        "name": "Dr. Chadia Chakib",
+        "role": "Fondatrice & Praticienne Certifiée",
+        "desc": "Spécialisée en régulation neuro-sensible et accompagnement des dysrégulations cognitives à l'INFC Maroc."
+      },
+      {
+        "name": "Praticien INFC",
+        "role": "Praticien Senior & Focus Pédiatrique",
+        "desc": "Expert en accompagnement du TDA/H, focus scolaire et accompagnement des enfants neuro-atypiques."
+      },
+      {
+        "name": "Praticien INFC",
+        "role": "Consultante stress & cohérence",
+        "desc": "Spécialisée en régulation du stress aigu, burn-out et cohérence neuro-cardiaque."
+      }
+    ],
+    "centersSubtitle": "Nos Centres",
+    "centersTitle": "Un centre près de chez vous",
+    "centersDesc": "4 centres d'excellence au Maroc, équipés des dernières technologies de neurofeedback pour votre bien-être.",
+    "centersBtn": "Voir le centre ➔",
+    "finalSubtitle": "Commencez maintenant",
+    "finalTitle": "Prêt à transformer votre vie ?",
+    "finalDesc": "Faites le premier pas vers un cerveau plus performant et un esprit apaisé. Notre évaluation en ligne et notre orientation personnalisée vous donneront un premier aperçu de vos besoins.",
+    "finalBtn": "Évaluer mon Profil Cérébral ➔",
+    "finalSubBtn": "Analyse personnalisée en 2 minutes",
+    "finalBullets": [
+      "100% Confidentiel",
+      "Sans engagement",
+      "Résultats immédiats"
+    ],
+    "newsletterSubtitle": "Email Marketing & Conseils",
+    "newsletterTitle": "Abonnez-vous à la Lettre Neuro-Sensible",
+    "newsletterDesc": "Recevez chaque semaine des routines exclusives pour la concentration de votre enfant, des études de cas cliniques et les réponses de nos experts à la communauté.",
+    "newsletterPlaceholder": "Votre adresse email principale",
+    "newsletterBtn": "Rejoindre la liste ➔",
+    "newsletterSecure": "🔒 Vos données restent confidentielles. Désinscription en 1 clic."
+  },
+  "science": {
+    "heroTitle": "Entraîner le cerveau à s'auto-réguler",
+    "heroDesc": "Découvrez la science derrière le neurofeedback dynamique NeurOptimal®. Une approche naturelle et non invasive de régulation cérébrale, validée par des décennies de recherche en neurosciences.",
+    "loopSubtitle": "Entraînement Organique",
+    "loopTitle": "Comment fonctionne la boucle de régulation ?",
+    "loopDesc": "Ce n'est pas une thérapie médicale active. C'est un miroir en temps réel qui permet à votre cerveau de s'auto-corriger."
+  },
+  "seo": {
+    "title": "INFC — Centre de Régulation Neuro-Sensible Premium au Maroc",
+    "description": "Une approche naturelle et non invasive pour libérer votre cerveau du stress. 4 centres d'excellence au Maroc : Casablanca, Marrakech, Kénitra, Tanger.",
+    "keywords": "neurofeedback maroc, entraînement cérébral, neurofeedback casablanca, tdah maroc, insomnie maroc, régulation nerveuse"
+  }
+}
