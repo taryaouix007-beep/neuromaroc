@@ -279,5 +279,18 @@
     "title": "INFC — Premium Neuro-Sensory Regulation Center in Morocco",
     "description": "A natural, non-invasive approach to free your brain from stress. 4 centers of excellence in Morocco: Casablanca, Marrakech, Kenitra, Tangier.",
     "keywords": "neurofeedback morocco, brain training, neurofeedback casablanca, adhd morocco, insomnia morocco, nervous system regulation"
+  },
+  "comingSoon": {
+    "title": "Our Digital Space is Opening Soon",
+    "subtitle": "International Neurofeedback Center — Premium Neuro-Sensory Regulation",
+    "desc": "Our website is being finalized to provide you with an exceptional digital experience. However, our centers in Casablanca, Marrakech, Tangier, and Kenitra remain fully open and ready to welcome you.",
+    "notifyTitle": "Be Notified of the Launch",
+    "notifyDesc": "Subscribe to our newsletter to receive exclusive resources and be notified of the official opening.",
+    "placeholder": "Your primary email address",
+    "btnNotify": "Notify Me",
+    "centersTitle": "Need an Appointment or Information?",
+    "centersDesc": "Contact our practitioners directly via WhatsApp in the nearest center:",
+    "successMsg": "Subscription successful! You will be notified of our launch.",
+    "errorMsg": "An error occurred. Please try again."
   }
 }

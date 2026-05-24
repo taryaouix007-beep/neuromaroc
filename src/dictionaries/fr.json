@@ -279,5 +279,18 @@
     "title": "INFC — Centre de Régulation Neuro-Sensible Premium au Maroc",
     "description": "Une approche naturelle et non invasive pour libérer votre cerveau du stress. 4 centres d'excellence au Maroc : Casablanca, Marrakech, Kénitra, Tanger.",
     "keywords": "neurofeedback maroc, entraînement cérébral, neurofeedback casablanca, tdah maroc, insomnie maroc, régulation nerveuse"
+  },
+  "comingSoon": {
+    "title": "Ouverture Prochaine de Notre Espace Digital",
+    "subtitle": "International Neurofeedback Center — Régulation Neuro-Sensible Premium",
+    "desc": "Notre site web est en cours de finalisation pour vous offrir une expérience digitale d'exception. Cependant, nos centres de Casablanca, Marrakech, Tanger et Kénitra restent ouverts et opérationnels pour vous accueillir.",
+    "notifyTitle": "Soyez informé du lancement",
+    "notifyDesc": "Abonnez-vous à notre lettre d'information pour recevoir nos ressources exclusives et être notifié de l'ouverture officielle.",
+    "placeholder": "Votre adresse email principale",
+    "btnNotify": "M'inscrire",
+    "centersTitle": "Besoin d'un rendez-vous ou d'une information ?",
+    "centersDesc": "Contactez directement nos praticiens par WhatsApp dans le centre le plus proche :",
+    "successMsg": "Inscription réussie ! Vous serez notifié de notre ouverture.",
+    "errorMsg": "Une erreur est survenue. Veuillez réessayer."
   }
 }
