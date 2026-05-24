@@ -9,8 +9,9 @@
     "forum": "💬 Forum Parents",
     "blog": "Blog",
     "franchise": "🔑 Espace Franchise",
-    "community": "Communauté",
-    "cta": "S'orienter"
+    "community": "Plus",
+    "contact": "Contact",
+    "cta": "Contact & S'orienter"
   },
   "footer": {
     "desc": "Centre d'excellence en neurofeedback au Maroc. Entraînement cérébral 100% naturel pour votre bien-être.",
@@ -29,6 +30,7 @@
       "tanger": "Tanger"
     },
     "contact": "Contact",
+    "contactLink": "Page de Contact & Orientation →",
     "address": "Nº12 2ème étage, Immeuble Living office 362 BD Ghandi Oasis, Casablanca",
     "rights": "Tous droits réservés."
   },

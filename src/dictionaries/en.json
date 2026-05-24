@@ -9,8 +9,9 @@
     "forum": "💬 Parents Forum",
     "blog": "Blog",
     "franchise": "🔑 Franchise Portal",
-    "community": "Community",
-    "cta": "Get Guidance"
+    "community": "More",
+    "contact": "Contact",
+    "cta": "Contact & Orientation"
   },
   "footer": {
     "desc": "Center of excellence in neurofeedback in Morocco. 100% natural brain training for your well-being.",
@@ -29,6 +30,7 @@
       "tanger": "Tangier"
     },
     "contact": "Contact",
+    "contactLink": "Contact & Orientation Page →",
     "address": "No. 12 2nd floor, Living office Building, 362 BD Ghandi Oasis, Casablanca",
     "rights": "All rights reserved."
   },
