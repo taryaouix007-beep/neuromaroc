@@ -81,8 +81,13 @@ export default function Footer() {
             <p style={{ marginBottom: "0.5rem" }}>
               📞 <a href="tel:0522991783">0522991783</a>
             </p>
-            <p>
+            <p style={{ marginBottom: "0.5rem" }}>
               ✉️ <a href="mailto:contact@neurofeedback.ma">contact@neurofeedback.ma</a>
+            </p>
+            <p style={{ marginTop: "1rem" }}>
+              <Link href={`/${locale}/contact`} prefetch={false} style={{ color: "var(--color-gold)", fontWeight: 600 }}>
+                {t("footer.contactLink")}
+              </Link>
             </p>
           </div>
         </div>

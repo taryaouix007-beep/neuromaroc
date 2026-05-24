@@ -50,6 +50,7 @@ export default function Header() {
     { label: t("nav.idees"), href: `/${locale}/idees` },
     { label: t("nav.forum"), href: `/${locale}/forum` },
     { label: t("nav.blog"), href: `/${locale}/blog` },
+    { label: t("nav.franchise"), href: `/${locale}/franchise-dashboard` },
   ];
 
   const handleLanguageChange = (nextLocale: string) => {
@@ -567,26 +568,21 @@ export default function Header() {
                 <ul className="dropdown-menu">
                   {communityItems.map((item) => {
                     const isActive = pathname === item.href;
+                    const isFranchise = item.href.endsWith("franchise-dashboard");
                     return (
                       <li key={item.href}>
-                        <Link href={item.href} prefetch={false} className={isActive ? "active" : ""}>
+                        <Link
+                          href={item.href}
+                          prefetch={false}
+                          className={isActive ? "active" : ""}
+                          style={isFranchise ? { color: "var(--color-gold)", fontWeight: 700 } : undefined}
+                        >
                           {item.label}
                         </Link>
                       </li>
                     );
                   })}
                 </ul>
-              </li>
-
-              <li>
-                <Link
-                  href={`/${locale}/franchise-dashboard`}
-                  prefetch={false}
-                  style={{ color: "var(--color-gold)", fontWeight: 700 }}
-                  className={pathname === `/${locale}/franchise-dashboard` ? "active" : ""}
-                >
-                  {t("nav.franchise")}
-                </Link>
               </li>
             </ul>
 
@@ -608,26 +604,24 @@ export default function Header() {
               <li className="mobile-divider"></li>
               
               <li className="mobile-section-header">{t("nav.community")}</li>
-              {communityItems.map((item) => (
-                <li key={item.href} className="mobile-sublink" onClick={() => setIsMobileOpen(false)}>
-                  <Link href={item.href} prefetch={false} className={pathname === item.href ? "active" : ""}>
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {communityItems.map((item) => {
+                const isActive = pathname === item.href;
+                const isFranchise = item.href.endsWith("franchise-dashboard");
+                return (
+                  <li key={item.href} className="mobile-sublink" onClick={() => setIsMobileOpen(false)}>
+                    <Link
+                      href={item.href}
+                      prefetch={false}
+                      className={isActive ? "active" : ""}
+                      style={isFranchise ? { color: "var(--color-gold)", fontWeight: 700 } : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
               
               <li className="mobile-divider"></li>
-              
-              <li onClick={() => setIsMobileOpen(false)}>
-                <Link
-                  href={`/${locale}/franchise-dashboard`}
-                  prefetch={false}
-                  style={{ color: "var(--color-gold)", fontWeight: 700 }}
-                  className={pathname === `/${locale}/franchise-dashboard` ? "active" : ""}
-                >
-                  {t("nav.franchise")}
-                </Link>
-              </li>
 
               <li className="mobile-lang-row">
                 <button onClick={() => { setIsMobileOpen(false); handleLanguageChange("fr"); }} className={`lang-btn ${locale === "fr" ? "active" : ""}`}>FR</button>
