@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { supabase } from "@/lib/supabase";
 
 export async function POST(request: Request) {
   try {
@@ -12,8 +13,20 @@ export async function POST(request: Request) {
       );
     }
 
-    // Log the submission to console
-    console.log("🧬 NEW CLINICAL ACCESS REQUEST:", {
+    // Save to the dedicated local Supabase database
+    const { error } = await supabase
+      .from("medical_leads")
+      .insert([{ name, specialty, email, phone, objective }]);
+
+    if (error) {
+      console.error("❌ Failed to save clinical lead to local database:", error);
+      return NextResponse.json(
+        { success: false, error: "Une erreur est survenue lors de l'enregistrement de votre demande" },
+        { status: 500 }
+      );
+    }
+
+    console.log("🧬 NEW CLINICAL ACCESS REQUEST REGISTERED:", {
       name,
       specialty,
       email,
@@ -27,6 +40,7 @@ export async function POST(request: Request) {
       message: "Votre demande a été enregistrée avec succès. Nos équipes vous contacteront sous 24h avec la documentation complète.",
     });
   } catch (error) {
+    console.error("❌ Exception in clinical lead route:", error);
     return NextResponse.json(
       { success: false, error: "Une erreur est survenue lors de l'enregistrement de votre demande" },
       { status: 500 }

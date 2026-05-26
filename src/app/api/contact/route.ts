@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { supabase } from "@/lib/supabase";
 
 export async function POST(request: Request) {
   try {
@@ -12,8 +13,20 @@ export async function POST(request: Request) {
       );
     }
 
-    // Log the submission to console for easy debugging and future integration
-    console.log("📞 NEW CONTACT FORM SUBMISSION:", {
+    // Save to the dedicated local Supabase database
+    const { error } = await supabase
+      .from("contact_submissions")
+      .insert([{ name, phone, city, message }]);
+
+    if (error) {
+      console.error("❌ Failed to save contact submission to local database:", error);
+      return NextResponse.json(
+        { success: false, error: "Une erreur est survenue lors de l'enregistrement de votre demande" },
+        { status: 500 }
+      );
+    }
+
+    console.log("📞 NEW CONTACT FORM SUBMISSION REGISTERED:", {
       name,
       phone,
       city,
@@ -26,6 +39,7 @@ export async function POST(request: Request) {
       message: "Votre demande a été enregistrée. Un praticien INFC vous recontactera dans les plus brefs délais.",
     });
   } catch (error) {
+    console.error("❌ Exception in contact form route:", error);
     return NextResponse.json(
       { success: false, error: "Une erreur est survenue lors de l'envoi de la demande" },
       { status: 500 }

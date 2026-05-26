@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { supabase } from "@/lib/supabase";
 
 export async function POST(request: Request) {
   try {
@@ -12,18 +13,38 @@ export async function POST(request: Request) {
       );
     }
 
-    // Logging the subscription details so the user can see it in terminal logs
-    console.log("📬 NEW NEWSLETTER SUBSCRIBER:", {
+    // Save to the dedicated local Supabase database
+    const { error } = await supabase
+      .from("newsletter_subscribers")
+      .insert([{ email }]);
+
+    if (error) {
+      // Handle unique constraint violation gracefully
+      if (error.code === "23505") {
+        return NextResponse.json({
+          success: true,
+          message: "Vous êtes déjà inscrit à la Lettre Neuro-Sensible INFC.",
+        });
+      }
+
+      console.error("❌ Failed to save newsletter subscription to local database:", error);
+      return NextResponse.json(
+        { success: false, error: "Une erreur est survenue lors de l'inscription" },
+        { status: 500 }
+      );
+    }
+
+    console.log("📬 NEW NEWSLETTER SUBSCRIBER REGISTERED:", {
       email,
       timestamp: new Date().toISOString(),
     });
 
-    // Easily integrated with external database or mailing services (e.g. Mailchimp, SendGrid)
     return NextResponse.json({
       success: true,
       message: "Bienvenue dans la Lettre Neuro-Sensible INFC.",
     });
   } catch (error) {
+    console.error("❌ Exception in newsletter route:", error);
     return NextResponse.json(
       { success: false, error: "Une erreur est survenue lors de l'inscription" },
       { status: 500 }
