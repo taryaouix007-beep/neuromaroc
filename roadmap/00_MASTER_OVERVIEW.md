@@ -83,13 +83,13 @@
 
 | Phase | Document | Priority | Status | Description |
 |-------|----------|----------|--------|-------------|
-| 1 | [01_DATABASE_SETUP.md](./01_DATABASE_SETUP.md) | 🔴 Critical | `[ ]` | Apply migration, seed data, verify Supabase local |
-| 2 | [02_BLOG_DYNAMIC.md](./02_BLOG_DYNAMIC.md) | 🔴 Critical | `[ ]` | Dynamic blog from Supabase, detail pages, SEO |
+| 1 | [01_DATABASE_SETUP.md](./01_DATABASE_SETUP.md) | 🔴 Critical | `[x]` | Apply migration, seed data, verify Supabase local |
+| 2 | [02_BLOG_DYNAMIC.md](./02_BLOG_DYNAMIC.md) | 🔴 Critical | `[x]` | Dynamic blog from Supabase, detail pages, SEO |
 | 3 | [03_PATIENT_PORTAL.md](./03_PATIENT_PORTAL.md) | 🔴 Critical | `[ ]` | Secure auth, session mgmt, XpRia API integration |
 | 4 | [04_BOOKING_INTEGRATION.md](./04_BOOKING_INTEGRATION.md) | 🟡 High | `[ ]` | Online booking from centres page via XpRia |
 | 5 | [05_FRANCHISE_DASHBOARD.md](./05_FRANCHISE_DASHBOARD.md) | 🟡 High | `[ ]` | Authenticated franchise portal with analytics |
-| 6 | [06_QUIZ_LEAD_CAPTURE.md](./06_QUIZ_LEAD_CAPTURE.md) | 🟢 Medium | `[ ]` | Save Brain Boost quiz results to DB |
-| 7 | [07_SEO_AND_METADATA.md](./07_SEO_AND_METADATA.md) | 🟢 Medium | `[ ]` | SEO, OG tags, structured data, sitemap |
+| 6 | [06_QUIZ_LEAD_CAPTURE.md](./06_QUIZ_LEAD_CAPTURE.md) | 🟢 Medium | `[x]` | Save Brain Boost quiz results to DB |
+| 7 | [07_SEO_AND_METADATA.md](./07_SEO_AND_METADATA.md) | 🟢 Medium | `[x]` | SEO, OG tags, structured data, sitemap |
 | 8 | [08_ADMIN_PANEL.md](./08_ADMIN_PANEL.md) | 🟢 Medium | `[ ]` | Admin UI for blog, forum moderation, contacts |
 | 9 | [09_EMAIL_NOTIFICATIONS.md](./09_EMAIL_NOTIFICATIONS.md) | 🟢 Medium | `[ ]` | Email/SMS/WhatsApp notifications |
 | 10 | [10_PRODUCTION_DEPLOY.md](./10_PRODUCTION_DEPLOY.md) | 🔴 Critical | `[ ]` | Vercel deploy, Supabase cloud, env config |

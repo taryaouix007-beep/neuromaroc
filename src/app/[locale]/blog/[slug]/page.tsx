@@ -1,10 +1,9 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import React from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
+import { Metadata } from "next";
 
 interface BlogPost {
   id: string;
@@ -29,59 +28,50 @@ interface BlogPost {
   }>;
 }
 
-export default function BlogDetailPage() {
-  const params = useParams();
-  const locale = params.locale as string;
-  const slug = params.slug as string;
+async function getPost(slug: string, locale: string): Promise<BlogPost | null> {
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+  try {
+    const response = await fetch(`${baseUrl}/api/blog/${slug}?locale=${locale}`, {
+      next: { revalidate: 3600 },
+    });
+    if (!response.ok) return null;
+    const result = await response.json();
+    return result.success ? result.data : null;
+  } catch (err) {
+    console.error("Error fetching post:", err);
+    return null;
+  }
+}
 
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+export async function generateMetadata({ params }: { params: { locale: string; slug: string } }): Promise<Metadata> {
+  const { locale, slug } = params;
+  const post = await getPost(slug, locale);
 
-  useEffect(() => {
-    fetchPost();
-  }, [slug, locale]);
-
-  const fetchPost = async () => {
-    try {
-      setLoading(true);
-      const response = await fetch(`/api/blog/${slug}?locale=${locale}`, {
-        cache: "no-cache",
-      });
-
-      if (!response.ok) throw new Error("Post not found");
-
-      const result = await response.json();
-      if (result.success) {
-        setPost(result.data);
-      }
-      setError(null);
-    } catch (err) {
-      console.error("Error fetching post:", err);
-      setError("Article not found");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (loading) {
-    return (
-      <>
-        <Header />
-        <main style={{ padding: "2rem", textAlign: "center" }}>
-          Chargement de l'article...
-        </main>
-        <Footer />
-      </>
-    );
+  if (!post) {
+    return { title: "Article non trouvé" };
   }
 
-  if (error || !post) {
+  return {
+    title: `${post.title} - NeuroMaroc`,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/blog/${slug}`,
+    },
+  };
+}
+
+export default async function BlogDetailPage({ params }: { params: { locale: string; slug: string } }) {
+  const { locale, slug } = params;
+  const post = await getPost(slug, locale);
+
+  if (!post) {
     return (
       <>
         <Header />
         <main style={{ padding: "2rem", textAlign: "center" }}>
-          <h1>Article non trouvé</h1>
+          <h1 style={{ color: "var(--color-navy)" }}>Article non trouvé</h1>
           <Link href={`/${locale}/blog`}>
             <button className="btn btn-outline">Retour aux articles</button>
           </Link>
@@ -94,6 +84,23 @@ export default function BlogDetailPage() {
   return (
     <>
       <Header />
+      <JsonLd
+        type="BlogPosting"
+        data={{
+          headline: post.title,
+          description: post.description,
+          image: `${process.env.NEXT_PUBLIC_APP_URL}/api/og?title=${encodeURIComponent(post.title)}`,
+          datePublished: post.published_at,
+          author: {
+            "@type": "Person",
+            name: post.author_name,
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${process.env.NEXT_PUBLIC_APP_URL}/${locale}/blog/${slug}`,
+          },
+        }}
+      />
       <main>
         <style dangerouslySetInnerHTML={{ __html: `
           .blog-detail-hero {

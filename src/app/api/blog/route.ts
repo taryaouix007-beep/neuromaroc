@@ -14,16 +14,17 @@ export async function GET(request: Request) {
     
     const filters: BlogFilters = {
       locale: searchParams.get("locale") || "fr",
-      category: searchParams.get("category") || null,
+      category: searchParams.get("category") || undefined,
       page: parseInt(searchParams.get("page") || "1"),
       limit: parseInt(searchParams.get("limit") || "10"),
     };
 
     // Validate pagination
-    if (filters.page < 1) filters.page = 1;
-    if (filters.limit < 1 || filters.limit > 100) filters.limit = 10;
-
-    const offset = (filters.page - 1) * filters.limit;
+    const page = filters.page ?? 1;
+    const limit = filters.limit ?? 10;
+    const validatedPage = page < 1 ? 1 : page;
+    const validatedLimit = limit < 1 || limit > 100 ? 10 : limit;
+    const offset = (validatedPage - 1) * validatedLimit;
 
     // Build query
     let query = supabase
@@ -35,7 +36,7 @@ export async function GET(request: Request) {
       .not("published_at", "is", null)
       .lte("published_at", new Date().toISOString())
       .order("published_at", { ascending: false })
-      .range(offset, offset + filters.limit - 1);
+      .range(offset, offset + validatedLimit - 1);
 
     // Add category filter if provided
     if (filters.category) {
@@ -52,18 +53,18 @@ export async function GET(request: Request) {
       );
     }
 
-    const totalPages = Math.ceil((count || 0) / filters.limit);
+    const totalPages = Math.ceil((count || 0) / validatedLimit);
 
     return NextResponse.json({
       success: true,
       data: data || [],
       pagination: {
-        page: filters.page,
-        limit: filters.limit,
+        page: validatedPage,
+        limit: validatedLimit,
         total: count || 0,
         totalPages,
-        hasNextPage: filters.page < totalPages,
-        hasPrevPage: filters.page > 1,
+        hasNextPage: validatedPage < totalPages,
+        hasPrevPage: validatedPage > 1,
       },
     });
   } catch (error: any) {
