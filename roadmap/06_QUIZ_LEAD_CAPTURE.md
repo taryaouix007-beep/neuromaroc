@@ -1,7 +1,7 @@
 # Phase 6 — Quiz Lead Capture
 
 > **Priority**: 🟢 Medium  
-> **Status**: `[ ]` Not Started  
+> **Status**: `[x]` Completed  
 > **Estimated Effort**: 2–3 hours  
 > **Prerequisites**: Phase 1 (database running)
 

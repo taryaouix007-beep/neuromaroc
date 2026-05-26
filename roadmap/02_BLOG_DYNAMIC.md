@@ -1,7 +1,7 @@
 # Phase 2 — Dynamic Blog from Database
 
 > **Priority**: 🔴 Critical  
-> **Status**: `[ ]` Not Started  
+> **Status**: `[x]` Completed  
 > **Estimated Effort**: 4–6 hours  
 > **Prerequisites**: Phase 1 complete (Supabase running, `blog_posts` table seeded)
 

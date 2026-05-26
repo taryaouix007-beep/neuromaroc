@@ -215,11 +215,12 @@ export default function ProgrammesPage() {
               <div className="persona-row" id="persona-parents">
                 <div className="persona-visual has-bg">
                   <Image
-                    src="/assets/images/program-parents.png"
+                    src="/assets/images/optimized/bg-large.png"
                     alt=""
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     style={{ objectFit: "cover", zIndex: 0 }}
+                    priority
                   />
                   <div
                     style={{
@@ -266,10 +267,10 @@ export default function ProgrammesPage() {
               <div className="persona-row reverse" id="persona-trauma">
                 <div className="persona-visual has-bg">
                   <Image
-                    src="/assets/images/program-trauma.png"
+                    src="/assets/images/optimized/bg-large.png"
                     alt=""
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     style={{ objectFit: "cover", zIndex: 0 }}
                   />
                   <div
@@ -317,10 +318,10 @@ export default function ProgrammesPage() {
               <div className="persona-row" id="persona-performers">
                 <div className="persona-visual has-bg">
                   <Image
-                    src="/assets/images/program-performers.png"
+                    src="/assets/images/optimized/bg-large.png"
                     alt=""
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     style={{ objectFit: "cover", zIndex: 0 }}
                   />
                   <div
@@ -368,10 +369,10 @@ export default function ProgrammesPage() {
               <div className="persona-row reverse" id="persona-adults">
                 <div className="persona-visual has-bg">
                   <Image
-                    src="/assets/images/program-adults.png"
+                    src="/assets/images/optimized/bg-large.png"
                     alt=""
                     fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
                     style={{ objectFit: "cover", zIndex: 0 }}
                   />
                   <div
