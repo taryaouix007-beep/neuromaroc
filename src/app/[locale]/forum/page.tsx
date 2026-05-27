@@ -91,21 +91,27 @@ export default function ForumPage() {
   const [qAnonymous, setQAnonymous] = useState(false);
   const [qDetails, setQDetails] = useState("");
 
-  // Load from localStorage on mount
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedQuestions = localStorage.getItem("infc_forum_questions");
-      if (storedQuestions) {
-        try {
-          setQuestions(JSON.parse(storedQuestions));
-        } catch {
-          setQuestions(defaultQuestions);
-        }
+  // Fetch all questions from backend
+  const fetchQuestions = async () => {
+    try {
+      const res = await fetch("/api/forum");
+      const data = await res.json();
+      if (data.success && data.questions) {
+        setQuestions(data.questions);
       } else {
         setQuestions(defaultQuestions);
-        localStorage.setItem("infc_forum_questions", JSON.stringify(defaultQuestions));
       }
+    } catch (err) {
+      console.error("Failed to fetch questions:", err);
+      setQuestions(defaultQuestions);
+    }
+  };
 
+  useEffect(() => {
+    fetchQuestions();
+
+    // Load voted ids from localStorage to track client-side votes
+    if (typeof window !== "undefined") {
       const storedVotes = localStorage.getItem("infc_voted_questions");
       if (storedVotes) {
         try {
@@ -116,22 +122,6 @@ export default function ForumPage() {
       }
     }
   }, []);
-
-  // Save changes to questions
-  const saveQuestions = (updated: Question[]) => {
-    setQuestions(updated);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("infc_forum_questions", JSON.stringify(updated));
-    }
-  };
-
-  // Save changes to votes
-  const saveVotes = (updatedVotes: string[]) => {
-    setVotedIds(updatedVotes);
-    if (typeof window !== "undefined") {
-      localStorage.setItem("infc_voted_questions", JSON.stringify(updatedVotes));
-    }
-  };
 
   const showToastMsg = (title: string, message: string) => {
     setToast({ show: true, title, message });
@@ -147,57 +137,85 @@ export default function ForumPage() {
     return labels[cat] || cat;
   };
 
-  const handleVote = (id: string) => {
+  const handleVote = async (id: string) => {
     const isVoted = votedIds.includes(id);
     let updatedVotes = [...votedIds];
-    let updatedQuestions = questions.map((q) => {
-      if (q.id === id) {
-        const nextVotes = isVoted ? q.votes - 1 : q.votes + 1;
-        return { ...q, votes: nextVotes };
+
+    try {
+      const res = await fetch("/api/forum", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "vote",
+          questionId: id,
+          isVoted
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        // Update local state votes
+        setQuestions(prev => prev.map(q => q.id === id ? { ...q, votes: data.votes } : q));
+
+        if (isVoted) {
+          updatedVotes = updatedVotes.filter((v) => v !== id);
+          showToastMsg("👍 Intérêt", "Votre intérêt a été retiré.");
+        } else {
+          updatedVotes.push(id);
+          showToastMsg("🔥 Intérêt", "Votre intérêt a été enregistré. Cette question remonte dans la file !");
+        }
+        setVotedIds(updatedVotes);
+        if (typeof window !== "undefined") {
+          localStorage.setItem("infc_voted_questions", JSON.stringify(updatedVotes));
+        }
       }
-      return q;
-    });
-
-    if (isVoted) {
-      updatedVotes = updatedVotes.filter((v) => v !== id);
-      showToastMsg("👍 Intérêt", "Votre intérêt a été retiré.");
-    } else {
-      updatedVotes.push(id);
-      showToastMsg("🔥 Intérêt", "Votre intérêt a été enregistré. Cette question remonte dans la file !");
+    } catch (err) {
+      console.error("Error voting:", err);
     }
-
-    saveQuestions(updatedQuestions);
-    saveVotes(updatedVotes);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!qTitle.trim()) return;
 
-    const newQuestion: Question = {
-      id: "q-" + Date.now(),
-      title: qTitle.trim(),
-      description: qDetails.trim(),
-      category: qCategory,
-      author: qAnonymous ? "Anonyme" : "Parent INFC",
-      date: "Aujourd'hui",
-      votes: 1, // Start with author's interest
-      answer: null
-    };
+    try {
+      const res = await fetch("/api/forum", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title: qTitle.trim(),
+          description: qDetails.trim(),
+          category: qCategory,
+          anonymous: qAnonymous
+        })
+      });
+      const data = await res.json();
+      if (data.success && data.question) {
+        // Add the new question to state
+        setQuestions(prev => [data.question, ...prev]);
 
-    const updatedQuestions = [...questions, newQuestion];
-    saveQuestions(updatedQuestions);
+        // Mark as voted (the author is interested)
+        const updatedVotes = [...votedIds, data.question.id];
+        setVotedIds(updatedVotes);
+        if (typeof window !== "undefined") {
+          localStorage.setItem("infc_voted_questions", JSON.stringify(updatedVotes));
+        }
 
-    const updatedVotes = [...votedIds, newQuestion.id];
-    saveVotes(updatedVotes);
+        // Reset Form
+        setQTitle("");
+        setQDetails("");
+        setQAnonymous(false);
+        setQCategory("sommeil");
 
-    // Reset Form
-    setQTitle("");
-    setQDetails("");
-    setQAnonymous(false);
-    setQCategory("sommeil");
-
-    showToastMsg("💡 Publication", "Votre question a été publiée avec succès.");
+        const isDev = process.env.NODE_ENV === "development";
+        if (isDev) {
+          showToastMsg("💡 Publication", "Votre question a été publiée avec succès.");
+        } else {
+          showToastMsg("💡 Publication", "Votre question a été soumise pour modération par nos praticiens.");
+        }
+      }
+    } catch (err) {
+      console.error("Error creating question:", err);
+    }
   };
 
   // Compute Stats

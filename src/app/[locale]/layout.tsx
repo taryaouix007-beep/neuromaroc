@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import { Locale, getDictionary } from "@/dictionaries";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { JsonLd } from "@/components/JsonLd";
 import "../globals.css";
 
 const inter = Inter({
@@ -24,7 +25,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }> | { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const resolvedParams = await params;
   const locale = (resolvedParams?.locale || "fr") as Locale;
@@ -53,15 +54,15 @@ export async function generateMetadata({
       title,
       description,
       url: `${siteUrl}/${locale}`,
-      siteName: "INFC",
+      siteName: "INFC Maroc — Neurofeedback NeurOptimal®",
       locale: locale === "ar" ? "ar_MA" : locale === "fr" ? "fr_MA" : "en_US",
       type: "website",
       images: [
         {
-          url: "/assets/logos/logo.png",
-          width: 800,
-          height: 600,
-          alt: "INFC Logo",
+          url: "/assets/images/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "INFC Maroc Neurofeedback",
         },
       ],
     },
@@ -69,7 +70,11 @@ export async function generateMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/assets/logos/logo.png"],
+      images: ["/assets/images/og-image.jpg"],
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
     icons: {
       icon: [
@@ -114,7 +119,7 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }> | { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const resolvedParams = await params;
   const locale = (resolvedParams?.locale || "fr") as Locale;
@@ -162,9 +167,9 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir}>
       <body className={`${inter.variable} ${outfit.variable} ${locale === "ar" ? "rtl" : ""}`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        <JsonLd 
+          type="MedicalBusiness" 
+          data={schemaData} 
         />
         <LanguageProvider locale={locale} dictionary={dictionary}>
           {children}

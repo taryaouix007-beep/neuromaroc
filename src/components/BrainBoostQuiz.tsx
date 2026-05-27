@@ -84,6 +84,10 @@ const questions: Question[] = [
 export default function BrainBoostQuiz() {
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [scores, setScores] = useState<number[]>([0, 0, 0, 0, 0]);
+  const [leadEmail, setLeadEmail] = useState("");
+  const [leadName, setLeadName] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isCaptured, setIsCaptured] = useState(false);
 
   const handleSelectOption = (score: number) => {
     const updatedScores = [...scores];
@@ -105,6 +109,37 @@ export default function BrainBoostQuiz() {
   const memoire = isCompleted ? (scores[3] / 3) * 100 : 0;
 
   const totalScore = scores.reduce((a, b) => a + b, 0);
+
+  const handleSubmitLead = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/quiz-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: leadEmail,
+          name: leadName,
+          score: totalScore,
+          results: {
+            attention: attention,
+            sommeil: sommeil,
+            stress: stress,
+            memoire: memoire,
+          },
+        }),
+      });
+      if (response.ok) {
+        setIsCaptured(true);
+      } else {
+        alert("Une erreur est survenue. Veuillez réessayer.");
+      }
+    } catch (error) {
+      alert("Erreur de connexion.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const chartData = {
     labels: [
@@ -227,6 +262,64 @@ export default function BrainBoostQuiz() {
                     Veuillez consulter les résultats détaillés dans le graphique ci-dessous. Ils soulignent nos observations ainsi que les moyens de protéger son équilibre mental avant les examens.
                   </p>
                 </div>
+
+                {!isCaptured ? (
+                  <div style={{ 
+                    maxWidth: "500px", 
+                    margin: "0 auto 3rem", 
+                    padding: "2rem", 
+                    background: "rgba(10, 22, 40, 0.05)", 
+                    borderRadius: "15px", 
+                    border: "1px solid rgba(10, 22, 40, 0.1)" 
+                  }}>
+                    <p style={{ textAlign: "center", fontWeight: 700, color: "var(--color-navy)", marginBottom: "1.5rem" }}>
+                      📩 Recevez votre analyse complète par email
+                    </p>
+                    <form onSubmit={handleSubmitLead} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                      <input 
+                        type="text" 
+                        placeholder="Nom complet" 
+                        value={leadName} 
+                        onChange={(e) => setLeadName(e.target.value)}
+                        style={{ padding: "0.8rem", borderRadius: "8px", border: "1px solid #ddd" }}
+                      />
+                      <input 
+                        type="email" 
+                        required 
+                        placeholder="Adresse email" 
+                        value={leadEmail} 
+                        onChange={(e) => setLeadEmail(e.target.value)}
+                        style={{ padding: "0.8rem", borderRadius: "8px", border: "1px solid #ddd" }}
+                      />
+                      <button 
+                        disabled={isSubmitting} 
+                        style={{ 
+                          padding: "1rem", 
+                          borderRadius: "8px", 
+                          background: "var(--color-navy)", 
+                          color: "#fff", 
+                          fontWeight: 700, 
+                          cursor: "pointer",
+                          opacity: isSubmitting ? 0.7 : 1
+                        }}
+                      >
+                        {isSubmitting ? "Envoi en cours..." : "Recevoir mon analyse complète"}
+                      </button>
+                    </form>
+                  </div>
+                ) : (
+                  <div style={{ 
+                    textAlign: "center", 
+                    padding: "1rem", 
+                    background: "#e6f4ea", 
+                    color: "#1e7e34", 
+                    borderRadius: "8px", 
+                    marginBottom: "3rem", 
+                    fontWeight: 600 
+                  }}>
+                    ✅ Analyse envoyée ! Vérifiez votre boîte de réception.
+                  </div>
+                )}
 
                 <div style={{ maxWidth: "600px", margin: "0 auto 3rem", position: "relative", height: "350px" }}>
                   <Radar data={chartData} options={chartOptions} />

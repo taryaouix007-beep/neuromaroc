@@ -35,3 +35,19 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # neuromaroc
+
+
+
+
+### Copilot
+
+echo "alias local-copilot='COPILOT_PROVIDER_BASE_URL=http://localhost:11434/v1 COPILOT_MODEL=deepseek-coder-v2:16b COPILOT_PROVIDER_MAX_PROMPT_TOKENS=32768 COPILOT_PROVIDER_MAX_OUTPUT_TOKENS=8192 copilot'" >> ~/.zshrc
+
+
+
+echo "alias local-copilot='COPILOT_PROVIDER_BASE_URL=http://localhost:11434/v1 COPILOT_MODEL=gemma4:31b-cloud COPILOT_PROVIDER_MAX_PROMPT_TOKENS=32768 COPILOT_PROVIDER_MAX_OUTPUT_TOKENS=8192 copilot'" >> ~/.zshrc
+
+source ~/.zshrc
+
+
+local-copilot
