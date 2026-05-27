@@ -51,3 +51,42 @@ source ~/.zshrc
 
 
 local-copilot
+
+
+
+
+
+echo "alias local-copilot='COPILOT_PROVIDER_BASE_URL=http://localhost:11434/v1 COPILOT_MODEL=gemma4:31b-cloud COPILOT_PROVIDER_MAX_PROMPT_TOKENS=32768 COPILOT_PROVIDER_MAX_OUTPUT_TOKENS=8192 copilot'" >> ~/.zshrc
+
+source ~/.zshrc
+
+
+local-copilot
+
+
+ollama list
+macbook@192 nextjs % ollama launch copilot            
+macbook@192 nextjs % echo "alias local-copilot='COPILOT_PROVIDER_BASE_URL=http://localhost:11434/v1 COPILOT_MODEL=qwen3.6:latest COPILOT_PROVIDER_MAX_PROMPT_TOKENS=32768 COPILOT_PROVIDER_MAX_OUTPUT_TOKENS=8192 copilot'" >> ~/.zshrc
+macbook@192 nextjs % source ~/.zshrc
+
+macbook@192 nextjs % local-copilot 
+
+  
+  ╭─╮╭─╮   Changes    +740 -53
+  ╰─╯╰─╯   Duration   4h 15m 19s
+  █ ▘▝ █   Tokens     ↑ 4.5m • ↓ 49.2k
+   ▔▔▔▔    Resume     copilot --resume=dd108e4d-8094-4ffb-a8bf-1721803108d2
+
+macbook@192 nextjs % ollama list
+NAME                       ID              SIZE      MODIFIED     
+llama3.1:8b                46e0c10c039e    4.9 GB    4 hours ago     
+qwen2.5-coder:1.5b-base    02e0f2817a89    986 MB    4 hours ago     
+nomic-embed-text:latest    0a109f422b47    274 MB    4 hours ago     
+deepseek-coder-v2:16b      63fb193b3a9b    8.9 GB    27 hours ago    
+kimi-k2.5:cloud            6d1c3246c608    -         13 days ago     
+deepseek-v4-pro:cloud      22bfd5026abd    -         13 days ago     
+deepseek-v4-flash:cloud    ea027821675c    -         13 days ago     
+kimi-k2.6:cloud            a90cd0d1590c    -         13 days ago     
+qwen3.6:latest             07d35212591f    23 GB     2 weeks ago     
+gemma4:latest              c6eb396dbd59    9.6 GB    2 weeks ago     
+macbook@192 nextjs % 
