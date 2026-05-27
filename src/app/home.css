@@ -1283,8 +1283,7 @@
 
         /* Hero Section for Programmes page */
         .hero-section {
-            background: radial-gradient(circle at center, rgba(16,33,63,0.98) 0%, rgba(10,22,40,1) 100%), url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            background-blend-mode: overlay;
+            background: linear-gradient(rgba(10,22,40,0.75) 0%, rgba(10,22,40,0.6) 100%), url('/assets/images/optimized/bg-large.png') center/cover no-repeat;
             color: #fff;
             padding: 130px 0 80px;
             text-align: center;
